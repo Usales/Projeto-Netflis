@@ -1,0 +1,51 @@
+body {
+    font-family: "profile-gate-label", sans-serif;
+    background-color: #141414;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin-top: 30px;
+}
+
+.btn {
+    max-height: 190px;
+    max-width: 190px;
+    box-sizing: border-box; /* Inclui a borda nas dimensões da imagem */    
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 100;
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
+}
+
+p {
+    color: rosybrown;
+    margin-top: 10px; /* Adiciona um espaço de 10px acima do texto */
+}
+
+.btn:hover img { 
+    border: 5px solid rgb(232, 215, 215); /* Adiciona uma borda grossa branca em volta da imagem durante o hover */
+}
+
+.btn:hover p {
+    color: rgb(232, 215, 215); /* Altera a cor do texto do nome do botão durante o hover */
+}

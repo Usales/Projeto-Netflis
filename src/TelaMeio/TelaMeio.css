@@ -1,0 +1,83 @@
+/* Evita o scroll lateral sem bloquear o scroll vertical */
+body {
+    background-color: #141414;
+    overflow-x: hidden;
+}
+
+.h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 50px;
+    padding-left: 30px;
+}
+/* Container principal do carrossel */
+.carousel-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Ajuste conforme necessário */
+    margin: 0 auto; /* Centraliza o carrossel */
+    padding: 20px 0;
+    overflow: hidden; /* Garante que o conteúdo não ultrapasse a largura do wrapper */
+}
+
+/* Garante que o carrossel não ultrapasse os limites da tela */
+.carousel-container {
+    margin: 50px;
+    margin-top: 130px;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+}
+
+/* Ajuste das imagens */
+.carousel-slide {
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    align-items: center;
+}
+
+.carousel-slide img {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.05);
+}
+
+/* Ajuste dos botões de navegação */
+
+.slick-prev {
+    left: 10px; /* Ajustado para não sair da tela */
+    visibility: hidden;
+}
+
+.slick-next {
+    right: 90px; /* Mantém o botão dentro da tela */
+    width: 60px;
+    height: 60px;
+    background-color: rgb(0, 0, 0); /* Fundo  */
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+/* Ícone dentro do botão */
+.slick-next::before {
+
+    content: '▶'; /* Ícone de seta */
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+/* Efeito ao passar o mouse */
+.slick-next:hover {
+    background-color: rgb(0, 0, 0); /* Fundo  */
+
+}
