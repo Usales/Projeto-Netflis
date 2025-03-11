@@ -26,7 +26,7 @@
 
 .header {
     display: flex;
-    justify-content: flex-start; /* Alinha os itens à esquerda */
+    justify-content: space-between; /* Ajusta os itens para os extremos */
     align-items: center;
     padding: 20px; /* Afasta o cabeçalho das bordas da tela */
     width: 100%;
@@ -67,7 +67,6 @@
 }
 
 .extra-nav {
-    padding-right: 100px;
     display: flex;
     align-items: center;
 }
@@ -130,11 +129,12 @@
 }
 
 .LogoSerie {
-    width: 1400px; /* Define a largura */
+    width: 60%; /* Define a largura */
     height: auto; /* Mantém a proporção da imagem */
     position: absolute; /* Permite posicionamento livre */
     top: 300px; /* Ajusta a distância do topo */
-    left: 100px; /* Ajusta a distância da esquerda */
+    left: 39%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
     z-index: 10; /* Mantém a imagem acima dos outros elementos */
 }
 
@@ -160,7 +160,6 @@
 
 .btn-watch:hover {
     background-color: rgba(255, 255, 255, 0.500);
-
 }
 
 .btn-info { /* Estilos específicos para o botão de informações */
@@ -170,4 +169,79 @@
 
 .btn-info:hover {
     background-color: rgba(109, 109, 110, 0.5);
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row; /* Mantém os itens em linha */
+        flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+    }
+
+    .nav ul {
+        flex-direction: row; /* Mantém os itens em linha */
+        gap: 10px;
+    }
+
+    .extra-nav {
+        padding-right: 10px;
+        margin-top: 10px;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 10px; /* Espaçamento entre os botões */
+        padding-top: 200px;
+        margin: 15px;
+    }
+
+    .btn-watch, .btn-info {
+        font-size: 20px;
+        padding: 5px 15px;
+    }
+
+    .LogoSerie {
+        top: 200px; /* Ajusta a distância do topo para telas menores */
+        width: 60%; /* Reduz a largura para telas menores */
+        height: auto; /* Mantém a proporção da imagem */
+        position: absolute; /* Permite posicionamento livre */
+        top: 200px; /* Ajusta a distância do topo */
+        left: 39%; /* Centraliza horizontalmente */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 30px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .Lupa, .Sino, .Conta {
+        height: 20px;
+        width: 20px;
+    }
+
+    .buttons {
+        padding-top: 10px;
+    }
+
+    .btn-watch, .btn-info {
+        font-size: 10px;
+        padding: 8px 20px;
+    }
+
+    .LogoSerie {
+        top: 150px; /* Ajusta a distância do topo para telas menores */
+        width: 70%; /* Reduz a largura para telas menores */
+    }
+
+    .btn-watch, .btn-info {
+        margin-top: 100px;
+        width: 80%; /* Ajusta a largura dos botões para telas menores */
+        padding: 10px 0; /* Ajusta o padding dos botões para telas menores */
+        font-size: 18px; /* Ajusta o tamanho da fonte dos botões para telas menores */
+    }
 }

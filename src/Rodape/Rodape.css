@@ -1,0 +1,30 @@
+.rodape {
+    background-color: #141414;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rodape-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.rodape-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.rodape-links a:hover {
+    color: rosybrown;
+}
+
+.rodape-criador {
+    color: #e50914;
+    font-size: 12px;
+    font-weight: 300;
+}

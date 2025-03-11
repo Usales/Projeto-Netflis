@@ -7,6 +7,7 @@ import Sino from '../_images/Sino.png';
 import videoSrc from '../_images/videoplayback.mp4';
 import LogoSerie from '../_images/invecivel.png';
 import TelaMeio from '../TelaMeio';
+import Rodape from '../Rodape';
 
 function TelaInicial() {
     const location = useLocation();
@@ -48,6 +49,7 @@ function TelaInicial() {
                 </div>
             </div>
             <TelaMeio />
+            <Rodape />
         </div>
     );
 }

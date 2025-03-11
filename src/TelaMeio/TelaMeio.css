@@ -5,6 +5,7 @@ body {
 }
 
 .h1 {
+    padding-top: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     font-size: 40px;
