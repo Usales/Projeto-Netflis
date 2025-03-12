@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+/* Estilos gerais */
+body {
+    background-color: #141414;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 .tela-inicial {
     position: relative;
     color: white;
@@ -171,6 +181,41 @@
     background-color: rgba(109, 109, 110, 0.5);
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.profile-gate-label {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 /* Media Queries para responsividade */
 @media (max-width: 768px) {
     .header {
@@ -208,6 +253,19 @@
         top: 200px; /* Ajusta a distância do topo */
         left: 39%; /* Centraliza horizontalmente */
     }
+
+    .container {
+        gap: 15px;
+    }
+
+    .btn img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-gate-label {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -243,5 +301,18 @@
         width: 80%; /* Ajusta a largura dos botões para telas menores */
         padding: 10px 0; /* Ajusta o padding dos botões para telas menores */
         font-size: 18px; /* Ajusta o tamanho da fonte dos botões para telas menores */
+    }
+
+    .container {
+        gap: 10px;
+    }
+
+    .btn img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-gate-label {
+        font-size: 18px;
     }
 }
