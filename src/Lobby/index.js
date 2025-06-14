@@ -1,5 +1,5 @@
 import './Lobby.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Trainee from '../_images/imagem1.jpg';
 import Junior from '../_images/imagem2.jpg';
@@ -9,10 +9,8 @@ import Fullstack from '../_images/imagem5.jpg';
 
 function Lobby() {
     const navigate = useNavigate();
-    const [selectedImage, setSelectedImage] = useState(null);
 
     const handleClick = (image) => {
-        setSelectedImage(image);
         navigate('/tela-inicial', { state: { selectedImage: image } });
     };
 
